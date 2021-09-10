@@ -23,7 +23,7 @@ public class Passenger {
 
 
     @OneToMany(mappedBy = "passenger")
-    private List<Ticket> ticket =new ArrayList<>();
+    private List<Ticket> tickets =new ArrayList<>();
 
     public Passenger(int id, String name) {
         this.id = id;
