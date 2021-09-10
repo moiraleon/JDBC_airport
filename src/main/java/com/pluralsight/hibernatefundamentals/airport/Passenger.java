@@ -41,4 +41,12 @@ public class Passenger {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Airport getAirport() {
+        return airport;
+    }
+
+    public void setAirport(Airport airport) {
+        this.airport = airport;
+    }
 }
