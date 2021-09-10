@@ -11,4 +11,7 @@ public class Airport {
     @Id
     @Column(name = "ID")
     private int id;
+
+    @Column(name = "NAME")
+    private String name;
 }
