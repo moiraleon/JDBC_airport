@@ -39,6 +39,12 @@ public class Main {
         mike.addTicket(ticket3);
 
         em.persist(airport);
+        em.persist(john);
+        em.persist(mike);
+
+        em.persist(ticket1);
+        em.persist(ticket2);
+        em.persist(ticket3);
 
 
         em.getTransaction().commit();
