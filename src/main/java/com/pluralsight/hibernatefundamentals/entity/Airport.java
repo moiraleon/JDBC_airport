@@ -1,4 +1,4 @@
-package com.pluralsight.hibernatefundamentals.airport;
+package com.pluralsight.hibernatefundamentals.entity;
 
 
 import javax.persistence.*;
