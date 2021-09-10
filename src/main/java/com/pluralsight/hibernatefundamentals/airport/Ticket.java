@@ -7,12 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "PASSENGERS")
-public class Passenger {
+@Table(name = "TICKETS")
+public class Ticket {
 
     @Id
     @Column(name = "ID")
     private int id;
-
-
 }
