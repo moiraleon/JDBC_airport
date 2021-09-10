@@ -3,6 +3,7 @@ package com.pluralsight.hibernatefundamentals.airport;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -54,5 +55,13 @@ public class Passenger {
 
     public void setAirport(Airport airport) {
         this.airport = airport;
+    }
+
+    public List<Ticket> getTickets(){
+        return Collections.unmodifiableList(tickets);
+    }
+
+    public void addTicket(Ticket ticket){
+        tickets.add(ticket);
     }
 }

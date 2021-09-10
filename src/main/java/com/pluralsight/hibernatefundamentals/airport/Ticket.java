@@ -2,6 +2,8 @@ package com.pluralsight.hibernatefundamentals.airport;
 
 
 import javax.persistence.*;
+import java.util.Collections;
+import java.util.List;
 
 @Entity
 @Table(name = "TICKETS")
@@ -50,4 +52,5 @@ public class Ticket {
     public void setPassenger(Passenger passenger) {
         this.passenger = passenger;
     }
+
 }
