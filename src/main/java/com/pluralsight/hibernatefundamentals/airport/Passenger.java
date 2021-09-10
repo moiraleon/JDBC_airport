@@ -2,6 +2,8 @@ package com.pluralsight.hibernatefundamentals.airport;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "PASSENGERS")
@@ -17,6 +19,10 @@ public class Passenger {
     @ManyToOne
     @JoinColumn(name = "AIRPORT_ID")
     private Airport airport;
+
+
+    @OneToMany(mappedBy = "passenger")
+    private List<Ticket> ticket =new ArrayList<>();
 
     public Passenger(int id, String name) {
         this.id = id;

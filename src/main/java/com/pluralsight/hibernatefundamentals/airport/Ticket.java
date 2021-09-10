@@ -1,10 +1,7 @@
 package com.pluralsight.hibernatefundamentals.airport;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "TICKETS")
@@ -16,6 +13,10 @@ public class Ticket {
 
     @Column(name = "NUMBER")
     private String number;
+
+    @ManyToOne
+    @JoinColumn(name = "PASSENGER_ID")
+    private Passenger passenger;
 
     public Ticket(int id, String number) {
         this.id = id;
@@ -40,5 +41,13 @@ public class Ticket {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public Passenger getPassenger() {
+        return passenger;
+    }
+
+    public void setPassenger(Passenger passenger) {
+        this.passenger = passenger;
     }
 }
