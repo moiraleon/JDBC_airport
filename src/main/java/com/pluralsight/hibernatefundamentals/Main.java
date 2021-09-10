@@ -31,6 +31,12 @@ public class Main {
         Ticket ticket2 = new Ticket(2,"BB5678");
         ticket2.setPassenger(john);
 
+        john.addTicket(1);
+        john.addTicket(2);
+
+        Ticket ticket3 = new Ticket(3,"CC0987");
+        ticket3.setPassenger(mike);
+        mike.addTicket(3);
 
 
         em.getTransaction().commit();
